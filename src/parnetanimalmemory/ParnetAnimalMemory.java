@@ -5,21 +5,19 @@
  */
 package parnetanimalmemory;
 
-import java.util.Random;
 import javafx.application.Application;
 import javafx.stage.Stage;
+import java.util.Random;
+
 
 /**
  *
  * @author TomDomGom
  */
 public class ParnetAnimalMemory extends Application {
-    Random aleatorio;
     
-    int FILARAND  = 0;
-    int COLUMNARAND = 0;
-    final int FILAS = 4;
-    final int COLUMNAS = 4;
+    // Variables .
+//    Random aleatorio;
     
     @Override
     public void start(Stage primaryStage) {
@@ -32,26 +30,27 @@ public class ParnetAnimalMemory extends Application {
      * @param args the command line arguments
      */
         public static void main(String[] args) {
-  
-        aleatorio = new Random();
-        FILARAND = random.nextInt(FILAS);
-        COLUMNARAND = random.nextInt(COLUMNAS)
         
-        char[][] letras = new char[FILARAND][COLUMNARAND];
-        char letraQueToca = 'A';
+        // Variables para la matriz.
+        final int COLUMNAS = 4;
+        final int FILAS = 4 ;
+        Random r = new Random();
+        char[][] letras = new char[FILAS][COLUMNAS];
+        //char[] letraQueToca = 'A';
+        String letraQueToca = "ABCDEFGH";
+        int tamano = letraQueToca.length();
  
         //Carga las letras en la matriz
-        for(int f=0; f<FILARAND; f++) {
-            for(int c=0; c<COLUMNARAND; c++) {
-                letras[f][c] = letraQueToca;
-                letraQueToca++;
+        for(int f=0; f<FILAS; f++) {
+            for(int c=0; c<COLUMNAS; c++) {
+                letras[f][c] = letraQueToca.charAt(r.nextInt(tamano));
             }
         }
  
         //Mostrar en pantalla la matriz
-        for(int f=0; f<FILARAND; f++) {
-            for(int c=0; c<COLUMNARAND; c++) {
-                System.out.print(letras[f][c]+"\t");
+        for(int f=0; f<FILAS; f++) {
+            for(int c=0; c<COLUMNAS; c++) {
+                System.out.print(letras[f][c]+ "\t");
             }
            System.out.println(); 
         }
