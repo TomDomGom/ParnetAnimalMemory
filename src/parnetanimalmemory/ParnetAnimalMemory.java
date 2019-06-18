@@ -17,7 +17,7 @@ import java.util.Random;
 public class ParnetAnimalMemory extends Application {
     
     // Variables .
-//    Random aleatorio;
+    // Random aleatorio;
     
     @Override
     public void start(Stage primaryStage) {
@@ -37,8 +37,7 @@ public class ParnetAnimalMemory extends Application {
         final int FILAS = 4 ;
         int filasRan;
         int columnasRan;
-        
-                
+                 
         Random r = new Random();
         filasRan = r.nextInt(FILAS);
         columnasRan = r.nextInt(COLUMNAS);
@@ -46,23 +45,16 @@ public class ParnetAnimalMemory extends Application {
         char[][] letras = new char[FILAS][COLUMNAS];
         char letraQueToca = 'A';
         //String letraQueToca = "ABCDEFGH";
-       // int letra = letraQueToca.length();
+        // int letra = letraQueToca.length();
  
         
         // Empezamos con la letra A. en posición aleatoria. cada letra tiene que estar pintada 2 veces en la matriz.
         // y luego una vez que la letra fuese pintada incrementar por la siguiente del abecedario.
         
-        //Carga las letras en la matriz
-//        for(int f=0; f<FILAS; f++) {
-//            for(int c=0; c<COLUMNAS; c++) {
-//
-//            }
-//        }
-
-            // antes de colocar una letra, entramos en un bucle mientras la posición
-            //  generada aleatoriamente esté ocupada, generando dentro del bucle
-            //  nuevas posiciones
-            // Al salir del bucle se coloca la letra
+        // antes de colocar una letra, entramos en un bucle mientras la posición
+        //  generada aleatoriamente esté ocupada, generando dentro del bucle
+        //  nuevas posiciones
+        // Al salir del bucle se coloca la letra
             
             // Creamos un bucler for cual se repetira 8 veces.
             for (int i = 0; i < 8; i++) {
